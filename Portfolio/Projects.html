@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhavi Palla Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Madhavi's Portfolio</div>
+    <nav>
+      <ul class="nav-links">
+	<li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-subtitle">Showcasing my skills in wireframing, web design, prototyping, and more.</p>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-link active" onclick="showTab('wireframes')">Wireframes</button>
+        <button class="tab-link" onclick="showTab('web-design')">Web Design</button>
+        <button class="tab-link" onclick="showTab('prototyping')">Prototyping</button>
+      </div>
+
+      <!-- Wireframes Tab -->
+      <div id="wireframes" class="tab-content active">
+        <div class="project-item">
+          <img src="wireframe-app.jpg" alt="Wireframe App">
+          <p>Food Recipe App Wireframe</p>
+        </div>
+        <div class="project-item">
+          <img src="wireframe-payment.jpg" alt="Wireframe Payment App">
+          <p>Online Payment Wireframe</p>
+        </div>
+      </div>
+
+      <!-- Web Design Tab -->
+      <div id="web-design" class="tab-content">
+        <div class="project-item">
+          <img src="web-design-recipe.jpg" alt="Web Design Recipe">
+          <p>Food Recipe Web Design</p>
+        </div>
+        <div class="project-item">
+          <img src="web-design-payment.jpg" alt="Web Design Payment">
+          <p>Online Payment Web Design</p>
+        </div>
+      </div>
+
+      <!-- Prototyping Tab -->
+      <div id="prototyping" class="tab-content">
+        <div class="project-item">
+          <img src="prototype-recipe.jpg" alt="Prototype Recipe App">
+          <p>Food Recipe App Prototype</p>
+        </div>
+        <div class="project-item">
+          <img src="prototype-payment.jpg" alt="Prototype Payment App">
+          <p>Online Payment App Prototype</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Madhavi Palla | Designed with ❤️</p>
+  </footer>
+
+  <script>
+    // Tab functionality
+    function showTab(tabId) {
+      // Hide all tabs
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Remove active state from all buttons
+      const tabLinks = document.querySelectorAll('.tab-link');
+      tabLinks.forEach(link => link.classList.remove('active'));
+
+      // Show selected tab and activate corresponding button
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
